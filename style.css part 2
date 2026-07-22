@@ -1,0 +1,285 @@
+/* ==========================================
+   STYLE PART 2
+   Romantic Animation
+========================================== */
+
+/* Efek hati */
+.heart{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation:heartFall linear forwards;
+    pointer-events:none;
+    z-index:5;
+    filter:drop-shadow(0 0 8px #ff7aa2);
+}
+
+@keyframes heartFall{
+
+    0%{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+/* Mawar */
+
+.rose{
+
+    position:fixed;
+
+    top:-60px;
+
+    font-size:28px;
+
+    animation:roseFall linear forwards;
+
+    pointer-events:none;
+
+    z-index:4;
+
+}
+
+@keyframes roseFall{
+
+    0%{
+
+        transform:
+        translateY(-60px)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Meteor */
+
+.meteor{
+
+    position:fixed;
+
+    width:180px;
+
+    height:2px;
+
+    background:
+    linear-gradient(to right,
+    white,
+    transparent);
+
+    transform:rotate(-35deg);
+
+    animation:meteor 2s linear;
+
+    z-index:3;
+
+}
+
+@keyframes meteor{
+
+    from{
+
+        transform:
+        translateX(0)
+        translateY(0)
+        rotate(-35deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translateX(-600px)
+        translateY(400px)
+        rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* Countdown */
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+#countdown div{
+
+    width:110px;
+
+    height:110px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 0 20px rgba(255,255,255,.15);
+
+}
+
+#countdown span{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+}
+
+#countdown p{
+
+    color:#ffd8e5;
+
+}
+
+/* Ending */
+
+#ending{
+
+    display:none;
+
+    min-height:100vh;
+
+    text-align:center;
+
+    padding:100px 30px;
+
+    animation:fadeUp 2s;
+
+}
+
+#ending h1{
+
+    font-size:65px;
+
+    color:#ff9fc4;
+
+    text-shadow:0 0 20px #ff4d88;
+
+}
+
+#ending h2{
+
+    margin-top:20px;
+
+    font-size:36px;
+
+}
+
+#ending p{
+
+    margin-top:35px;
+
+    font-size:22px;
+
+    line-height:42px;
+
+    color:#ffffff;
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.title{
+
+font-size:38px;
+
+}
+
+.glass{
+
+padding:30px;
+
+}
+
+#typing{
+
+font-size:18px;
+
+line-height:34px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+#countdown div{
+
+width:85px;
+
+height:85px;
+
+}
+
+#countdown span{
+
+font-size:26px;
+
+}
+
+#ending h1{
+
+font-size:42px;
+
+}
+
+  }
