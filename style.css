@@ -1,0 +1,264 @@
+/* ===========================
+   HAPPY 5 MONTHS PREMIUM
+   PART 1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:#050816;
+    color:white;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+#loading{
+    position:fixed;
+    inset:0;
+    background:#050816;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#loading h1{
+    font-size:70px;
+    animation:pulse 1.5s infinite;
+}
+
+#loading h2{
+    margin-top:20px;
+    font-weight:300;
+    letter-spacing:3px;
+}
+
+.loader{
+    width:220px;
+    height:6px;
+    background:#333;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:30px;
+}
+
+.loader::before{
+    content:"";
+    display:block;
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#ff4d88,#ffd1dc);
+    animation:loadingBar 3s linear forwards;
+}
+
+@keyframes loadingBar{
+    from{width:0%;}
+    to{width:100%;}
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+#background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top,#18254f,#050816 75%);
+}
+
+/* Bulan */
+
+#moon{
+    position:absolute;
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    background:#fff8d5;
+    top:70px;
+    right:80px;
+    box-shadow:
+    0 0 25px white,
+    0 0 60px #fff6b7,
+    0 0 120px #fff6b7;
+}
+
+/* Bintang */
+
+#stars{
+    position:absolute;
+    inset:0;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.8);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+}
+
+/* ===========================
+   GLASS CARD
+=========================== */
+
+.glass{
+    width:90%;
+    max-width:700px;
+
+    margin:auto;
+    margin-top:90px;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.4);
+
+    animation:fadeUp 1.5s;
+}
+
+.title{
+    font-size:55px;
+    margin-bottom:10px;
+    color:#ffd6e7;
+}
+
+.glass h2{
+    font-size:28px;
+    color:white;
+    margin-bottom:30px;
+}
+
+#typing{
+    font-size:21px;
+    line-height:40px;
+    min-height:180px;
+    color:#ffeef4;
+}
+
+/* Tombol */
+
+button{
+    margin-top:30px;
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    background:linear-gradient(90deg,#ff4d88,#ff7eb3);
+
+    color:white;
+
+    transition:.35s;
+}
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 20px #ff5fa0,
+    0 0 40px #ff5fa0;
+
+}
+
+/* Surat */
+
+.letter{
+
+    width:90%;
+
+    max-width:800px;
+
+    margin:70px auto;
+
+    background:white;
+
+    color:#444;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    line-height:35px;
+
+    display:none;
+
+}
+
+.letter h1{
+
+    color:#ff4d88;
+
+    margin-bottom:25px;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
